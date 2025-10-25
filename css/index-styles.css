@@ -1,3 +1,481 @@
 * {
     background-color: black;
+    --main-bg-color: rgb(94, 37, 19);
+    margin: 0;
 }
+
+
+
+:root{
+    --hero-h: 48vh;
+    --bg-top: #4b1e0e;
+    --bg-bottom: #050505;
+    --barrel-radius: 180px; /* distance from center to chamber */
+    --chamber-size: 84px;
+    --n: 8; /* nombre de compartiments */
+    --spin-speed: 14s;
+    --metal: linear-gradient(145deg,#2a2a2a 0%, #444 35%, #222 60%, #6b5244 100%);
+}
+
+.hero {
+    height: var(--hero-h);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 40%),
+                linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+    pointer-events:none;
+}
+
+.barrel-wrap{
+    position:relative;
+    width: calc(var(--barrel-radius) * 2.6);
+    height: calc(var(--barrel-radius) * 1.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    perspective: 1400px;
+    z-index:2;
+}
+
+.barrel {
+    position:relative;
+    width: calc(var(--barrel-radius) * 1.6);
+    height: calc(var(--barrel-radius) * 1.6);
+    border-radius: 50%;
+    background: var(--metal);
+    background: transparent;
+    box-shadow:
+        inset 0 12px 40px rgba(0,0,0,0.6),
+        0 8px 40px rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform-style: preserve-3d;
+    overflow:visible;
+}
+
+.barrel::after{
+    content:"";
+    position:absolute;
+    inset:12%;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.06), transparent 20%),
+                linear-gradient(180deg, rgba(255,255,255,0.02), transparent 40%);
+    filter: blur(6px);
+    pointer-events:none;
+}
+
+.barrel::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.01) 60%, transparent 100%);
+  animation: pulse 8s ease-in-out infinite;
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.03); }
+}
+
+.ring {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transform-style: preserve-3d;
+}
+
+
+.chamber {
+    --i: 0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: var(--chamber-size);
+    height: var(--chamber-size);
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    /* positionnement circulaire :
+        translate(-50%,-50%) recentre, puis rotateZ(ANGLE) translateY(-radius) puis rotate back so image is upright */
+    transform:
+        translate(-50%,-50%)
+        rotateZ(calc(var(--i) * 360deg / var(--n)))
+        translateY(calc(-1 * var(--barrel-radius)))
+        rotateZ(calc(-1 * var(--i) * 360deg / var(--n)));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.chamber .cell {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    overflow:hidden;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:
+        inset 0 -6px 14px rgba(0,0,0,0.6),
+        0 6px 18px rgba(0,0,0,0.6);
+    border: 3px solid rgba(255,255,255,0.03);
+    position:relative;
+}
+
+.cell img {
+    width:85%;
+    height:85%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    transform: translateZ(12px);
+}
+
+.barrel .rivet {
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: linear-gradient(180deg,#cfcfcf,#777);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6), inset 0 -2px 2px rgba(255,255,255,0.15);
+    top:6%;
+    right:8%;
+    transform: translateZ(40px);
+}
+
+.chamber.highlight .cell{
+    box-shadow:
+        0 0 26px rgba(220,30,30,0.24),
+        inset 0 -8px 18px rgba(0,0,0,0.6);
+    transform: scale(1.07);
+}
+
+.chamber.highlight::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    box-shadow: 0 0 40px rgba(220,30,30,0.28), 0 0 8px rgba(255,120,120,0.08) inset;
+    pointer-events:none;
+}
+
+.roulette-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, transparent 100%);
+    animation: spin 20s linear infinite;
+    filter: blur(40px);
+}
+/*
+@keyframes spin {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+.hero-title {
+    position:absolute;
+    top:10%;
+    /* center the title*/
+    left:50%;
+    
+
+    transform: translateX(-50%);
+    font-size: clamp(28px, 4vw, 58px);
+    letter-spacing: 8px;
+    font-weight:800;
+    z-index:3;
+    color:#fff;
+    font-family: Lexend Giga, sans-serif;
+    text-transform:uppercase;
+    -webkit-font-smoothing:antialiased;
+    background-color: transparent;
+}
+
+.hero-sub {
+    position:absolute;
+    bottom:8%;
+    left:50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    z-index:3;
+    background: rgba(0,0,0,0.28);
+    padding:8px 16px;
+    border-radius:999px;
+    font-family: Lexend Giga, sans-serif;
+    border:1px solid rgba(255,255,255,0.03);
+}
+
+
+.hero-title {
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% { text-shadow: none; }
+  10% { text-shadow: 5px 3px red; }
+  20% { text-shadow: -5px 3px blue; }
+  40% { text-shadow: 5px 3px blue; }
+  60% { text-shadow: 5px 2px red; }
+}
+  
+
+
+
+
+.shop-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.shop-categories {
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+/* Ensure the ultimate card always appears on its own row below other categories */
+.ultimate-category-card {
+    order: 999; /* put it after other cards */
+    flex-basis: 100%; /* force full-width row */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Hide all checkboxes */
+input[type='checkbox'] {
+    display: none;
+}
+
+/* Default label styling */
+.category-card > label {
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ultimate-category-card > label {
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    border: 2px solid var(--main-bg-color);
+}
+
+
+/* Active label styling (JS will add/remove .active on labels) */
+.shop-categories label.active,
+.ultimate-category-card label.active {
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: var(--main-bg-color); 
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+}
+
+
+.category-card > label:hover {
+    color: rgb(201, 65, 16);
+}
+
+
+
+
+/* Show the active content section; JS will add/remove the .active class */
+.content {
+    display: none; /* default hidden; JS toggles .active */
+}
+
+.content.active {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.content > .product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Lexend Giga";
+    font-size: 14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+
+.track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+}
+
+
+.track::-webkit-scrollbar { height: 8px; }
+.track::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+
+/* three items visible: each item width = (track width - gaps)/3 ; use flex-basis */
+.track > .product-container {
+    flex: 0 0 calc((100% - 40px) / 3);
+    box-sizing: border-box;
+}
+
+
+.product-container img { 
+    width: 100%;
+    height: 180px;
+    object-fit: contain; 
+    background: linear-gradient(180deg,#060606,#0b0b0b); 
+    padding: 10px; 
+    border-radius: 10px;
+    display: block;
+}
+
+.product-container p {
+    margin: 10px 0 0 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    background: rgba(0,0,0,0.65); /* stronger contrast */
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+}
+
+.product-container {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+.product-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* show the full product without cropping */
+    background: linear-gradient(180deg,#0b0b0b,#141414); /* subtle panel backdrop */
+    padding: 12px; /* give breathing room so small items don't touch edges */
+    border-radius: 10px 10px 6px 6px;
+    display: block;
+    filter: contrast(1.05) saturate(1.08);
+}
+
+.product-container p {
+    margin: 8px 0 0 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    background: rgba(30,111,255,0.14); /* subtle blue panel for legibility */
+    padding: 10px 12px;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #eaf1ff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+@media (max-width: 900px) {
+    .track > .product-container { flex: 0 0 calc((100% - 40px) / 2); }
+}
+
+@media (max-width: 520px) {
+    .track > .product-container { flex: 0 0 100%; }
+}
+
+
+
+/* Responsive behavior */
+/* Allow categories to wrap on narrower widths */
+.shop-categories {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* On small screens stack categories vertically and emphasize the ultimate card */
+@media (max-width: 600px) {
+    .shop-categories {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 80px; /* space for the fixed ultimate card */
+        align-items: stretch;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .category-card, .ultimate-category-card {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .category-card > label, .ultimate-category-card > label {
+        width: auto;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    /* Place the ultimate card on its own centered row below other categories */
+    .ultimate-category-card {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 6px;
+        padding-top: 8px;
+    }
+
+    .ultimate-category-card > label {
+        border: 2px solid #1e6fff;
+        border-radius: 999px;
+        padding: 14px 24px;
+        background: linear-gradient(90deg, rgba(30,111,255,0.04), rgba(30,111,255,0.01));
+        color: #eaf1ff;
+        text-decoration: none;
+    }
+
+    /* If the ultimate card is checked, make the outline stronger */
+    #ultimate-gamble-box:checked ~ .shop-overview .ultimate-category-card label[for="ultimate-gamble-box"] {
+        box-shadow: 0 0 0 4px rgba(30,111,255,0.08);
+        text-decoration: underline;
+        text-decoration-color: #a8c8ff;
+    }
+}
+
