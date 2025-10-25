@@ -7,36 +7,78 @@
     <link rel="stylesheet" href="css/index-styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Joti+One&family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Joti+One&family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     
+    <!--  HEADER - NAV  -->
+    <header class="site-header" role="banner">
+        <div class="container header-contenu">
+            <a href="index.html" class="logo">RR</a>
+
+            <nav class="nav" role="navigation" aria-label="Main">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="boutique.html" class="nav-link">Boutique</a></li>
+                <li><a href="panier.html" class="nav-link">Panier</a></li>
+                <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+            </ul>
+            </nav>
+
+            <div class="panier">
+            <button class="panier-button" aria-label="Voir le panier">
+                🛒 <span class="panier-count" aria-hidden="true">0</span>
+            </button>
+            <button class="burger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- HERO avec intro-panel entre le titre et le barrel --- -->
     <section class="hero" aria-label="Bannière principale — roulette russe (concept visuel)">
     <h1 class="hero-title">RUSSIAN ROULETTE</h1>
 
+    <!-- INTRO PANEL : espace entre titre et carousel -->
+    <div class="intro-panel">
+        
+        <p class="slogan">Un site d’e-commerce qui transforme l’achat en pari. 1 chance sur 10 d’avoir la surprise.</p>
+        <div class="intro-panel-buttons">
+            <a class="button-boutique" href="boutique.html">Entrer dans la boutique</a>
+            <a class="button-how" href="#how-it-works">Comment ça marche</a>
+        </div>
+        
+
+        
+    </div>
+
+    <!-- BARIL AVEC IMAGES -->
     <div class="barrel-wrap" role="img" aria-hidden="true">
         <div class="barrel" aria-hidden="true">
-
-        <!-- la bague qui tourne -->
         <div class="ring" id="ring">
-            <!-- 8 compartiments : remplace les chemins d'image -->
-            <div class="chamber" style="--i:0"><div class="cell"><img src="images/products/foods-and-drinks/coca-cola.jpeg" alt="Produit 1"></div></div>
-            <div class="chamber" style="--i:1"><div class="cell"><img src="images/products/fashion/hat.jpeg" alt="Produit 2"></div></div>
-            <div class="chamber" style="--i:2"><div class="cell"><img src="images/products/home-and-kitchen/mug.jpeg" alt="Produit 3"></div></div>
-            <div class="chamber" style="--i:3"><div class="cell"><img src="images/products/tech-and-accessories/airpods.jpeg" alt="Produit 4"></div></div>
-            <div class="chamber" style="--i:4"><div class="cell"><img src="images/products/toys-and-games/rubiks-cube.png" alt="Produit 5"></div></div>
-            <div class="chamber" style="--i:5"><div class="cell"><img src="images/products/school-supplies/pens.jpeg" alt="Produit 6"></div></div>
-            <div class="chamber" style="--i:6"><div class="cell"><img src="images/products/personal-care/lotions.jpeg" alt="Produit 7"></div></div>
-            <div class="chamber" style="--i:7"><div class="cell"><img src="images/products/foods-and-drinks/doritos.jpeg" alt="Produit 8"></div></div>
-        </div>
+            <div class="cellule" style="--i:0"><div class="image"><img src="images/products/foods-and-drinks/coca-cola.jpeg" alt="Produit 1"></div></div>
+            <div class="cellule" style="--i:1"><div class="image"><img src="images/products/fashion/hat.jpeg" alt="Produit 2"></div></div>
+            <div class="cellule" style="--i:2"><div class="image"><img src="images/products/home-and-kitchen/mug.jpeg" alt="Produit 3"></div></div>
+            <div class="cellule" style="--i:3"><div class="image"><img src="images/products/tech-and-accessories/airpods.jpeg" alt="Produit 4"></div></div>
+            <div class="cellule" style="--i:4"><div class="image"><img src="images/products/toys-and-games/rubiks-cube.png" alt="Produit 5"></div></div>
+            <div class="cellule" style="--i:5"><div class="image"><img src="images/products/school-supplies/pens.jpeg" alt="Produit 6"></div></div>
+            <div class="cellule" style="--i:6"><div class="image"><img src="images/products/personal-care/lotions.jpeg" alt="Produit 7"></div></div>
+            <div class="cellule" style="--i:7"><div class="image"><img src="images/products/foods-and-drinks/doritos.jpeg" alt="Produit 8"></div></div>
 
-        <div class="rivet" aria-hidden="true"></div>
+        </div>
+            <div class="rivet" aria-hidden="true"></div>
         </div>
     </div>
 
-    <div class="hero-sub">Chance : 1 sur 10. Aura : +10000</div>
+    <div class="hero-aura">Chance : 1 sur 10. Aura : +10000</div>
     </section>
+
+
+
+
+
 
     <!-- IDEE : pour chaque produit, afficher la version piegee pendant 0.2 secondes sur le hover puis revenir a verison normale-->
     <!-- et la probabilite qu'il soit piege-->
@@ -216,37 +258,15 @@
     </div>
 
     <script src="js/one-checkbox.js"></script>
-    <script>
-    /* JS minimal pour l'effet "chargé" qui s'allume aléatoirement sur un compartiment
-        et change toutes les X secondes. Pas d'audio, pas d'autoplay agressif. */
-    (function(){
-        const ring = document.getElementById('ring');
-        const chambers = Array.from(ring.querySelectorAll('.chamber'));
-        const N = chambers.length;
-        let current = -1;
 
-        function pickRandom(){
-        if (current >= 0) chambers[current].classList.remove('highlight');
-        const next = Math.floor(Math.random()*N);
-        chambers[next].classList.add('highlight');
-        current = next;
-        // par chance/poker : faire "frisson" en ralentissant momentané la rotation
-        ring.style.animationDuration = (10 + Math.random()*10) + 's';
-        }
-
-        // première sélection après 1.2s
-        setTimeout(pickRandom, 1200);
-        // puis à intervalle variable pour rester vivant
-        setInterval(pickRandom, 3000 + Math.random()*6000);
-    })();
+    <script> // rotation du baril
 
     (function(){
         const ring = document.getElementById('ring');
         let angle = 0;
 
         function rotate() {
-            // rotation fluide, sans saut, en incrémentant petit à petit
-            angle -= 0.1; // ajustable : plus ou moins rapide
+            angle -= 0.1; 
             ring.style.transform = `rotateZ(${angle}deg) rotateX(10deg)`;
             requestAnimationFrame(rotate);
         }

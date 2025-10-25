@@ -82,14 +82,36 @@
         prev = document.createElement('button');
         prev.className = 'nav-arrow prev';
         prev.setAttribute('aria-label','Précédent');
-        prev.innerHTML = '◀';
+        // create an <img> so we can reuse the same right-arrow asset and flip with CSS
+        const prevImg = new Image();
+        prevImg.src = 'images/left-arrow.png';
+        prevImg.alt = 'Précédent';
+        prevImg.width = 24; prevImg.height = 24;
+        // fallback to glyph if image fails to load (prevents white-square or broken-icon UX)
+        prevImg.onerror = function(){
+          // remove any possibly-broken image and show a glyph instead
+          if(prevImg.parentNode) prev.removeChild(prevImg);
+          prev.textContent = '◀';
+          prev.classList.add('no-img');
+        };
+        prev.appendChild(prevImg);
         content.appendChild(prev);
       }
       if(!next){
         next = document.createElement('button');
         next.className = 'nav-arrow next';
         next.setAttribute('aria-label','Suivant');
-        next.innerHTML = '▶';
+        const nextImg = new Image();
+        nextImg.src = 'images/right-arrow.png';
+        nextImg.alt = 'Suivant';
+        nextImg.width = 24; nextImg.height = 24;
+        nextImg.onerror = function(){
+          if(nextImg.parentNode) next.removeChild(nextImg);
+          next.textContent = '▶';
+          next.classList.add('no-img');
+        };
+        next.appendChild(nextImg);
+
         content.appendChild(next);
       }
 
@@ -109,3 +131,19 @@
     });
   });
 })();
+
+(function(){
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger && burger.addEventListener('click', ()=> {
+      nav && nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    });
+  })();
+
+  // demo : update compteur panier (ex : tu peux lier ça à ton panier réel)
+  (function() {
+    const cartCount = document.querySelector('.cart-count');
+    // si tu veux tester : incrémente toutes les 4s (enlever en prod)
+    // setInterval(()=> cartCount.textContent = parseInt(cartCount.textContent) + 1, 4000);
+  })();
