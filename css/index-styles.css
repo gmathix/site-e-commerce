@@ -327,8 +327,8 @@ input {
     display: flex; 
     flex-wrap: wrap; 
     align-items: center; 
-    justify-content: flex-start; 
-    gap: 10px; 
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .category-card > label, .ultimate-category-card > label {
@@ -339,6 +339,10 @@ input {
     color: beige;
     border:3px solid rgba(255,255,255,0.1);
     transition: all .2s ease; 
+}
+
+.ultimate-category-card > label {
+    border:3px solid rgba(212, 224, 37, 0.856);
 }
 
 .category-card > label:hover { 
@@ -380,7 +384,7 @@ input {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    gap: 8px;
+    gap: 5px;
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
     padding: 8px; 
     border-radius: 12px; 
