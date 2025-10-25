@@ -35,37 +35,44 @@
     <hr class="line2">
     <hr class="line1">
 
-    <nav>
-        <ul class="menu">
-            <li>
-                <a class="filtre" href="#">FILTRES</a>
-            </li>
-            <li class="dropdown">
-                <a href="#">Catégories ▾</a>
-                <ul class="submenu">
-                    <li><a href="#">Catégorie 1</a></li>
-                    <li><a href="#">Catégorie 2</a></li>
-                    <li><a href="#">Catégorie 3</a></li>
+    <section class="filters">
+        <button class="filter-toggle">Filtres ▾</button>
+
+        <div class="filter-group">
+
+            <div class="filter-item">
+                <p class="filter-title">FILTRES</p>
+            </div>
+
+            <div class="filter-item">
+                <p class="filter-label">Catégorie ▾</p>
+                <ul class="filter-options">
+                    <li>T-shirt</li>
+                    <li>Pantalon</li>
+                    <li>Chaussures</li>
                 </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Catégories ▾</a>
-                <ul class="submenu">
-                    <li><a href="#">Catégorie 1</a></li>
-                    <li><a href="#">Catégorie 2</a></li>
-                    <li><a href="#">Catégorie 3</a></li>
+            </div>
+
+            <div class="filter-item">
+                <p class="filter-label">Taille ▾</p>
+                <ul class="filter-options">
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
                 </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Catégories ▾</a>
-                <ul class="submenu">
-                    <li><a href="#">Catégorie 1</a></li>
-                    <li><a href="#">Catégorie 2</a></li>
-                    <li><a href="#">Catégorie 3</a></li>
+            </div>
+
+            <div class="filter-item">
+                <p class="filter-label">Prix ▾</p>
+                <ul class="filter-options">
+                    <li>0-50€</li>
+                    <li>50-100€</li>
+                    <li>+100€</li>
                 </ul>
-            </li>
-        </ul>
-    </nav>
+            </div>
+        </div>
+    </section>
+
 
     <h2 class="sous-titre">NOUVEAUTÉS</h2>
     <br>
@@ -149,7 +156,7 @@
                 <h2>CATEGORIE</h2>
             </div>
             <div class="show_article">
-                <div class="article">
+                <div class="articlev2">
                     <img src="images/article.png" alt="img article">
                     <div class="content">
                         <div class="info_article">
@@ -158,9 +165,8 @@
                         </div>
                         <p id="prix">190,99€</p>
                     </div>
-                    <button>Ajouter au panier</button>
                 </div>
-                <div class="article">
+                <div class="articlev2">
                     <img src="images/article.png" alt="img article">
                     <div class="content">
                         <div class="info_article">
@@ -169,9 +175,8 @@
                         </div>
                         <p id="prix">190,99€</p>
                     </div>
-                    <button>Ajouter au panier</button>
                 </div>
-                <div class="article">
+                <div class="articlev2">
                     <img src="images/article.png" alt="img article">
                     <div class="content">
                         <div class="info_article">
@@ -180,12 +185,91 @@
                         </div>
                         <p id="prix">190,99€</p>
                     </div>
-                    <button>Ajouter au panier</button>
                 </div>
 
             </div>
         </div>
     </div>
+    <div class="grille_articles">
+
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+        <div class="article">
+            <img src="images/article.png" alt="img article">
+            <div class="content">
+                <div class="info_article">
+                    <p>Marque</p>
+                    <p>Nom article</p>
+                </div>
+                <p id="prix">190,99€</p>
+            </div>
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
 </body>
+
+<script>
+    const toggleBtn = document.querySelector('.filter-toggle');
+    const filterSection = document.querySelector('.filters');
+
+    toggleBtn.addEventListener('click', () => {
+        filterSection.classList.toggle('show');
+    });
+</script>
+
+
 
 </html>
