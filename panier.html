@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Lexend+Giga:wght@100..900&display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="pagepanier.css">
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Lexend+Giga:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/panier-styles.css">
 </head>
+
 <body>
     <header class="site-header" role="banner">
         <div class="container header-contenu">
             <a href="index.html" class="logo">RR</a>
 
             <nav class="nav" role="navigation" aria-label="Main">
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                <li><a href="boutique.html" class="nav-link">Boutique</a></li>
-                <li><a href="panier.html" class="nav-link">Panier</a></li>
-                <li><a href="a-propos.html" class="nav-link">À propos</a></li>
-            </ul>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="boutique.html" class="nav-link">Boutique</a></li>
+                    <li><a href="panier.html" class="nav-link">Panier</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                </ul>
             </nav>
 
             <div class="panier">
-            <button class="panier-button" aria-label="Voir le panier">
-                🛒 <span class="panier-count" aria-hidden="true">0</span>
-            </button>
-            <button class="burger" aria-label="Ouvrir le menu">
-                <span></span><span></span><span></span>
-            </button>
+                <button class="panier-button" aria-label="Voir le panier">
+                    🛒 <span class="panier-count" aria-hidden="true">0</span>
+                </button>
+                <button class="burger" aria-label="Ouvrir le menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <hr class="invisible">
+
+    <p class="title">PANIER</p>
 
     <main>
         <div class="baniere"></div>
@@ -49,163 +56,183 @@
                     </thead>
                     <tbody>
                         <tr class=Articles-panier>
-                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/phone-charger.jpeg?raw=true alt="image du produit" class=img_produit></td>
-                            <td><h4>Adapteur de charge</h4></td>
+                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/phone-charger.jpeg?raw=true
+                                    alt="image du produit" class=img_produit></td>
+                            <td>
+                                <h4>Adapteur de charge Samsung </h4>
+                            </td>
                             <td class=prix>13.99€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
                             <td class=prix>13.99€ </td>
-                            <td><button class=supprimer>supprimer</button></td>
+                            <td><button class=supprimer>Supprimer</button></td>
                         </tr>
 
                         <tr class=Articles-panier>
-                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/notebook.jpeg?raw=true alt="image du produit" class=img_produit></td>
-                            <td><h4>cahier oxford</h4></td>
+                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/notebook.jpeg?raw=true
+                                    alt="image du produit" class=img_produit></td>
+                            <td>
+                                <h4>Cahier Oxford petits carreaux</h4>
+                            </td>
                             <td class=prix>6.10€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
                             <td class=prix>5.99€ </td>
-                            <td><button class=supprimer>supprimer</button></td>
+                            <td><button class=supprimer>Supprimer</button></td>
 
-                            <tr class=Articles-panier>
-                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/toys-and-games/rubiks-cube.png?raw=true alt="image du produit" class=img_produit></td>
-                            <td><h4>Rubik's cube</h4></td>
+                        <tr class=Articles-panier>
+                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/toys-and-games/rubiks-cube.png?raw=true
+                                    alt="image du produit" class=img_produit></td>
+                            <td>
+                                <h4>Rubik's cube</h4>
+                            </td>
                             <td class=prix>35.99€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
                             <td class=prix>35.99€ </td>
-                            <td><button class=supprimer>supprimer</button></td>
+                            <td><button class=supprimer>Supprimer</button></td>
 
-                            <tr class=Articles-panier>
-                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/airpods.jpeg?raw=truetruealt="image du produit" class=img_produit></td>
-                            <td><h4>Airpods pro</h4></td>
+                        <tr class=Articles-panier>
+                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/airpods.jpeg?raw=truetruealt="image du produit"
+                                    class=img_produit></td>
+                            <td>
+                                <h4>Airpods pro</h4>
+                            </td>
                             <td class=prix>219.90€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
                             <td class=prix>219.90€ </td>
-                            <td><button class=supprimer>supprimer</button></td>
+                            <td><button class=supprimer>Supprimer</button></td>
 
                             <div class="total des achats">
-                               <div id="sous-total" class="prix-container">
-                                      <p>Sous-total</p>
-                                      <p class="prix">0.00</p>
+                                <div id="sous-total" class="prix-container">
+                                    <p>Sous-total</p>
+                                    <p class="prix">0.00</p>
                                 </div>
 
-                            <div id="frais-de-livraison" class="prix-container">
-                                      <p>Frais de livraison</p>
-                                      <p class="prix">4.99€ </p>
-                              </div>
+                                <div id="frais-de-livraison" class="prix-container">
+                                    <p>Frais de livraison</p>
+                                    <p class="prix">4.99€ </p>
+                                </div>
 
-                            <div id="code-promo" class="prix-container">
+                                <div id="code-promo" class="prix-container">
                                     <p>Code promo</p>
-                                     <p class="montant-de-promo">-10.99€ </p>
-                    </div>
+                                    <p class="montant-de-promo">-10.99€ </p>
+                                </div>
 
-                           <div id="total" class="container-prix">
-                                      <p>Total</p>
-                                      <p class="prix">0.00</p>
-                                                   <button id=payer class=valider>Procéder au paiement</button>
-                    </div>
-                    </div>
+                                <div id="total" class="container-prix">
+                                    <p>Total</p>
+                                    <p class="prix">0.00</p>
+                                    <button id=payer class=valider>Procéder au paiement</button>
+                                </div>
                             </div>
-                        </tr>
-                    </tbody>
-                </table>
+            </div>
+            </tr>
+            </tbody>
+            </table>
             </div>
         </section>
 
         <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const panierRows = document.querySelectorAll(".Articles-panier");
-    const sousTotalElement = document.querySelector("#sous-total .prix");
-    const fraisLivraisonElement = document.querySelector("#frais-de-livraison .prix");
-    const promoElement = document.querySelector("#code-promo .montant-de-promo");
-    const totalElement = document.querySelector("#total .prix");
+            document.addEventListener("DOMContentLoaded", function () {
+                const panierRows = document.querySelectorAll(".Articles-panier");
+                const sousTotalElement = document.querySelector("#sous-total .prix");
+                const fraisLivraisonElement = document.querySelector("#frais-de-livraison .prix");
+                const promoElement = document.querySelector("#code-promo .montant-de-promo");
+                const totalElement = document.querySelector("#total .prix");
 
-    function updateTotal() {
-        let sousTotal = 0;
+                function updateTotal() {
+                    let sousTotal = 0;
 
-        panierRows.forEach(row => {
-            const prixUnitaire = parseFloat(row.querySelectorAll(".prix")[0].textContent);
-            const quantitéInput = row.querySelector(".quantité");
-            const quantité = parseInt(quantitéInput.value);
-            const totalCell = row.querySelectorAll(".prix")[1];
+                    panierRows.forEach(row => {
+                        const prixUnitaire = parseFloat(row.querySelectorAll(".prix")[0].textContent);
+                        const quantitéInput = row.querySelector(".quantité");
+                        const quantité = parseInt(quantitéInput.value);
+                        const totalCell = row.querySelectorAll(".prix")[1];
 
-            const totalProduit = prixUnitaire * quantité;
-            totalCell.textContent = totalProduit.toFixed(2);
-            sousTotal += totalProduit;
-        });
+                        const totalProduit = prixUnitaire * quantité;
+                        totalCell.textContent = totalProduit.toFixed(2);
+                        sousTotal += totalProduit;
+                    });
 
-        sousTotalElement.textContent = sousTotal.toFixed(2);
+                    sousTotalElement.textContent = sousTotal.toFixed(2);
 
-        const fraisLivraison = parseFloat(fraisLivraisonElement.textContent);
-        const promo = parseFloat(promoElement.textContent.replace("-", ""));
-        const totalFinal = sousTotal + fraisLivraison - promo;
+                    const fraisLivraison = parseFloat(fraisLivraisonElement.textContent);
+                    const promo = parseFloat(promoElement.textContent.replace("-", ""));
+                    const totalFinal = sousTotal + fraisLivraison - promo;
 
-        totalElement.textContent = totalFinal.toFixed(2);
-    }
+                    totalElement.textContent = totalFinal.toFixed(2);
+                }
 
-    document.querySelectorAll(".quantité").forEach(input => {
-        input.addEventListener("change", updateTotal);
-    });
+                document.querySelectorAll(".quantité").forEach(input => {
+                    input.addEventListener("change", updateTotal);
+                });
 
-    updateTotal();
-});
-</script>
+                updateTotal();
+            });
+        </script>
 
 
-         <section id=recommandation>
+        <section id=recommandation>
             <h3>Recommandations</h3>
-                <div class=recommandation-container>
-                    <div class=articles-card id=img-produit>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/pens.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>5€ </p>
-                        <h4>Bic</h4><br>
-                        <h4>stylo à 4 couleurs</h4><br>
-                        <button class=add-to-cart>Ajouter au panier</button>
-                    </div>
-        
-                    <div class=articles-card>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/doritos.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>1.99€ </p>
-                        <h4>Doritos</h4><br>
-                        <h4>paquet chips 400g</h4><br>
-                        <button class=add-to-cart>Ajouter au panier</button>
-                    </div>
-        
-                    <div class=articles-card>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/personal-care/shampoo.jpeg?raw=truealt=article class=img_produit>
-                        <p class=prix>26.10€ </p>
-                        <h4>shampooing</h4><br>
-                        <h4>shampoo anti-pelliculaire</h4><br>
-                        <button class=add-to-cart>Ajouter au panier</button>
-                    </div>
-        
-                    <div class=articles-card>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/fashion/hat.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>15.99€ </p>
-                        <h4>Wankul</h4><br>
-                        <h4>casquette Wankul laink...</h4><br>
-                        <button class=add-to-cart>Ajouter au panier</button>
-                    </div>
-        
-                    <div class=articles-card>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/coca-cola.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>3,99€ </p>
-                        <h4>coca-cola</h4><br>
-                        <h4>canette 33cl avec sucre</h4><br>
-                        <button class=add-to-cart>Ajouter au panier</button>
-                    </div>
+            <div class=recommandation-container>
+                <div class=articles-card id=img-produit>
+                    <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/pens.jpeg?raw=true
+                        alt=article class=img_produit>
+                    <p class=prix>1,99€ </p>
+                    <h4>Bic</h4><br>
+                    <h4>Stylo 4 couleurs</h4><br>
+                    <button class=add-to-cart>Ajouter au panier</button>
                 </div>
-            </div>  
-     
+
+                <div class=articles-card>
+                    <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/doritos.jpeg?raw=true
+                        alt=article class=img_produit>
+                    <p class=prix>1.99€ </p>
+                    <h4>Doritos</h4><br>
+                    <h4>Paquet chips 400g</h4><br>
+                    <button class=add-to-cart>Ajouter au panier</button>
+                </div>
+
+                <div class=articles-card>
+                    <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/personal-care/shampoo.jpeg?raw=truealt=article
+                        class=img_produit>
+                    <p class=prix>26.10€ </p>
+                    <h4>H&S</h4><br>
+                    <h4>Shampooing anti-pelliculaire</h4><br>
+                    <button class=add-to-cart>Ajouter au panier</button>
+                </div>
+
+                <div class=articles-card>
+                    <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/fashion/hat.jpeg?raw=true
+                        alt=article class=img_produit>
+                    <p class=prix>15.99€ </p>
+                    <h4>Wankul</h4><br>
+                    <h4>Casquette Wankul</h4><br>
+                    <button class=add-to-cart>Ajouter au panier</button>
+                </div>
+
+                <div class=articles-card>
+                    <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/coca-cola.jpeg?raw=true
+                        alt=article class=img_produit>
+                    <p class=prix>3,99€ </p>
+                    <h4>Coca-Cola</h4><br>
+                    <h4>Canette 33cl avec sucre</h4><br>
+                    <button class=add-to-cart>Ajouter au panier</button>
+                </div>
+            </div>
+            </div>
+
     </main>
-    
-<footer >
+
+    <footer>
         <div class="footer__container">
             <div class="footer__item">
                 <h2>Nos plateformes</h2>
                 <hr class="footer-hr">
                 <div class="footer__social-links">
-                    <a href="#"><img src="https://github.com/gmathix/site-e-commerce/blob/main/images/instagram.png?raw=true"></a>
-                    <a href="#"><img src="https://github.com/gmathix/site-e-commerce/blob/main/images/tik-tok.png?raw=true"></a>              
-                    <a href="#"><img src="https://github.com/gmathix/site-e-commerce/blob/main/images/twitter.png?raw=true"></a>
+                    <a href="#"><img
+                            src="https://github.com/gmathix/site-e-commerce/blob/main/images/instagram.png?raw=true"></a>
+                    <a href="#"><img
+                            src="https://github.com/gmathix/site-e-commerce/blob/main/images/tik-tok.png?raw=true"></a>
+                    <a href="#"><img
+                            src="https://github.com/gmathix/site-e-commerce/blob/main/images/twitter.png?raw=true"></a>
                 </div>
             </div>
 
@@ -222,13 +249,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="#">Jeux & Jouets</a>
                     <a href="#"><strong>Ultimate Gamble Box</strong></a>
                 </div>
-            </div>  
+            </div>
 
             <div class="footer__item">
                 <h2>Modes de Paiement</h2>
                 <hr class="footer-hr">
                 <div class="footer__categories">
-                    <img src="https://github.com/gmathix/site-e-commerce/blob/main/images/american-express.png?raw=true">
+                    <img
+                        src="https://github.com/gmathix/site-e-commerce/blob/main/images/american-express.png?raw=true">
                     <img src="https://github.com/gmathix/site-e-commerce/blob/main/images/apple-pay.png?raw=true">
                     <img src="https://github.com/gmathix/site-e-commerce/blob/main/images/bitcoin.png?raw=true">
                     <img src="https://github.com/gmathix/site-e-commerce/blob/main/images/card.png?raw=true">
@@ -241,11 +269,12 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <p class="footer__text"><strong>© 2024 Russian Roulette. Tous droits réservés.</strong></p>
         <p class="footer__text">© Mohamed BOUOIARARNE</p>
-        
+
     </footer>
 
- 
+
 
 
 </body>
+
 </html>
