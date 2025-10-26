@@ -617,6 +617,42 @@ button:hover {
 
 }
 
+/* ---------------------- pagination ---------------------- */
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 25px 0;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background: orangered;
+    transform: translateY(-3px);
+}
+
+.pagination .active {
+    background: orangered;
+}
+
+.pagination .next {
+        backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.12);
+}
+
 /* ============================================= FOOTER =============================================  */
 
 footer {
