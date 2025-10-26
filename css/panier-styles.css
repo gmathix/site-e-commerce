@@ -1,172 +1,194 @@
 * {
 
-    font-family: "Lexend Giga";
+  font-family: "Lexend Giga";
 
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend Giga", 
+  font-family: "Lexend Giga",
 }
 
-html, body { 
-    height: 100%; 
-    background: linear-gradient(to left, #61240d, #050505);
-    scroll-behavior: smooth;
-    font-family: 'Lexend Giga';
-    color: white;
+html,
+body {
+  height: 100%;
+  background: linear-gradient(to left, #61240d, #050505);
+  scroll-behavior: smooth;
+  font-family: 'Lexend Giga';
+  color: white;
 }
+
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .header-contenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1180px;
-    margin: 0 auto;
-    width: 100%;
-    gap: 16px;
-    padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 16px;
+  padding: 0 20px;
 
 }
 
 .logo {
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
 }
 
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 18px;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  align-items: center;
 }
 
 .nav-link {
-    color: rgba(255, 255, 255, 0.88);
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .nav-link:hover {
-    background: var(--hover);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 
 .panier {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .panier-button {
-    background: var(--glass);
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
+  background: var(--glass);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .panier-count {
-    background: rgb(207, 67, 67);
-    padding: 2px 6px;
-    border-radius: 20px;
-    margin-left: 8px;
-    color: white;
-    font-size: 12px;
+  background: rgb(207, 67, 67);
+  padding: 2px 6px;
+  border-radius: 20px;
+  margin-left: 8px;
+  color: white;
+  font-size: 12px;
 }
 
 /* burger pour mobiles */
 .burger {
-    display: none;
-    background: transparent;
-    border: none;
-    width: 40px;
-    height: 34px;
-    cursor: pointer;
+  display: none;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
 }
 
 .burger span {
-    display: block;
-    height: 3px;
-    background: white;
-    margin: 6px 0;
-    border-radius: 2px;
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  border-radius: 2px;
 }
 
 /*  HERO (titre, intro, barrel)  */
 .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 92px;
-    padding-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 92px;
+  padding-bottom: 20px;
 }
 
 
 .hero-title {
-    font-size: clamp(20px, 4vw, 6vw);
-    letter-spacing: 8px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: white;
-    z-index: 3;
-    text-align: center;
-    animation: glitch 3.2s infinite;
+  font-size: clamp(20px, 4vw, 6vw);
+  letter-spacing: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  z-index: 3;
+  text-align: center;
+  animation: glitch 3.2s infinite;
 }
 
 @media (max-width: 650px) {
-    .site-header {
-        height: 56px;
-    }
+  .site-header {
+    height: 56px;
+  }
 
-    .header-contenu {
-        padding: 0 12px;
-    }
+  .header-contenu {
+    padding: 0 12px;
+  }
 
-    .nav-links {
-        display: none;
-    }
+  .nav-links {
+    display: none;
+  }
 
-    .burger {
-        display: block;
-    }
+  .burger {
+    display: block;
+  }
 
 
-    .hero {
-        padding-top: 78px;
-        gap: 10px;
-    }
+  .hero {
+    padding-top: 78px;
+    gap: 10px;
+  }
 
-    .carousel .product-container {
-        flex: 0 0 100%;
-        /* un seul produit */
-    }
+  .carousel .product-container {
+    flex: 0 0 100%;
+    /* un seul produit */
+  }
 }
+
 /* ============================================= PANIER  ============================================= */
+
+.invisible {
+  border: none;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 70px;
+
+}
+
+/* ---------------------- titre ---------------------- */
+
+.title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(1rem, 10vw, 4rem);
+
+}
 
 
 #panier {
@@ -218,7 +240,7 @@ button {
   background-color: orangered;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   font-weight: bold;
@@ -226,7 +248,8 @@ button {
 }
 
 button:hover {
-  background-color: rgb(20, 20, 20);
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.12);
   border: 1px solid orangered;
   color: orangered;
 }
@@ -236,7 +259,8 @@ button:hover {
   width: 100%;
   max-width: 500px;
   margin: 4vh auto;
-  background-color: rgb(30, 30, 30);
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.12);
   border: 2px solid orangered;
   border-radius: 10px;
   padding: 1.5rem;
@@ -257,36 +281,40 @@ button:hover {
   background-color: orangered;
   margin: 1.5rem 0;
 }
+
 .reommandations title {
-   margin-top: 40px;
+  margin-top: 40px;
 }
+
 #recommandation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #61240d, #050505);
+  border: solid 2px orangered;
 }
 
 .recommandation-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
 }
 
 
 .articles-card {
-    width: 200px;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    transition: transform 0.3s ease;
+  width: 200px;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
 }
 
 
@@ -335,92 +363,93 @@ button:hover {
   }
 
 }
+
 /* FOOTER */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    padding: 20px 0;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(12px);
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
-    text-align: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  gap: 50px;
 }
 
 .footer-hr {
-    height: 2px;
-    width: 100%;
+  height: 2px;
+  width: 100%;
 }
 
 .footer__container {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 80px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 80px;
 }
 
 .footer__item {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 40%;
 
 }
 
 .footer__social-links {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 
 .footer__social-links img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
-    transition: filter .3s ease;
-    cursor: pointer;
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  transition: filter .3s ease;
+  cursor: pointer;
 }
 
 .footer__social-links img:hover {
-    filter: invert(0.6) sepia(1) saturate(5) hue-rotate(330deg);
+  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(330deg);
 }
 
 
 .footer__categories {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer__categories a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    transition: color .3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color .3s ease;
 }
 
 .footer__categories a:hover {
-    color: orangered;
+  color: orangered;
 }
 
 .footer__categories img {
-    width: 40px;
-    height: 40px;
-    filter: invert(0.8);
-    margin-right: 6px;
+  width: 40px;
+  height: 40px;
+  filter: invert(0.8);
+  margin-right: 6px;
 }
 
 @media (max-width: 900px) {
-    .footer__container {
-        flex-direction: column;
-        gap: 50px;
-        align-items: center;
-    }
+  .footer__container {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
 }
