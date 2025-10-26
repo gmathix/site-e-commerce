@@ -190,6 +190,33 @@ body {
 
 }
 
+.line1 {
+    border: none;
+    height: 4px;
+    background-color: #ff4d00;
+    width: 40%;
+}
+
+.line2 {
+    border: none;
+    height: 4px;
+    background-color: #ff4d00;
+    width: 66%;
+}
+
+.line3 {
+    border: none;
+    height: 4px;
+    background-color: #ff4d00;
+    width: 80%;
+}
+
+.line4 {
+    border: none;
+    height: 4px;
+    background-color: #ff4d00;
+    width: 90%;
+}
 
 #panier {
   width: 90%;
