@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Lexend+Giga:wght@100..900&display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="css/panier-styles.css">
+    <link rel="stylesheet" href="pagepanier.css">
 </head>
 <body>
     <header class="site-header" role="banner">
@@ -49,36 +49,36 @@
                     </thead>
                     <tbody>
                         <tr class=Articles-panier>
-                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/personal-care/lotions.jpeg?raw=true alt="image du produit" class=img_produit></td>
-                            <td><h4>Lotions</h4></td>
-                            <td class=prix>13.99$</td>
+                            <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/phone-charger.jpeg?raw=true alt="image du produit" class=img_produit></td>
+                            <td><h4>Adapteur de charge</h4></td>
+                            <td class=prix>13.99€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
-                            <td class=prix>13.99$</td>
+                            <td class=prix>13.99€ </td>
                             <td><button class=supprimer>supprimer</button></td>
                         </tr>
 
                         <tr class=Articles-panier>
                             <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/notebook.jpeg?raw=true alt="image du produit" class=img_produit></td>
-                            <td><h4>Notebook</h4></td>
-                            <td class=prix>5.99$</td>
+                            <td><h4>cahier oxford</h4></td>
+                            <td class=prix>6.10€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
-                            <td class=prix>5.99$</td>
+                            <td class=prix>5.99€ </td>
                             <td><button class=supprimer>supprimer</button></td>
 
                             <tr class=Articles-panier>
                             <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/toys-and-games/rubiks-cube.png?raw=true alt="image du produit" class=img_produit></td>
                             <td><h4>Rubik's cube</h4></td>
-                            <td class=prix>19$</td>
+                            <td class=prix>35.99€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
-                            <td class=prix>19$</td>
+                            <td class=prix>35.99€ </td>
                             <td><button class=supprimer>supprimer</button></td>
 
                             <tr class=Articles-panier>
                             <td><img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/tech-and-accessories/airpods.jpeg?raw=truetruealt="image du produit" class=img_produit></td>
-                            <td><h4>Airpods</h4></td>
-                            <td class=prix>35.99$</td>
+                            <td><h4>Airpods pro</h4></td>
+                            <td class=prix>219.90€ </td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
-                            <td class=prix>35.99$</td>
+                            <td class=prix>219.90€ </td>
                             <td><button class=supprimer>supprimer</button></td>
 
                             <div class="total des achats">
@@ -89,12 +89,12 @@
 
                             <div id="frais-de-livraison" class="prix-container">
                                       <p>Frais de livraison</p>
-                                      <p class="prix">4.99$</p>
+                                      <p class="prix">4.99€ </p>
                               </div>
 
                             <div id="code-promo" class="prix-container">
                                     <p>Code promo</p>
-                                     <p class="montant-de-promo">-10.99$</p>
+                                     <p class="montant-de-promo">-10.99€ </p>
                     </div>
 
                            <div id="total" class="container-prix">
@@ -154,37 +154,42 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>Recommandations</h3>
                 <div class=recommandation-container>
                     <div class=articles-card id=img-produit>
-                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/ruler.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>5$</p>
-                        <h4>Ruler</h4><br>
+                        <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/school-supplies/pens.jpeg?raw=true alt=article class=img_produit>
+                        <p class=prix>5€ </p>
+                        <h4>Bic</h4><br>
+                        <h4>stylo à 4 couleurs</h4><br>
                         <button class=add-to-cart>Ajouter au panier</button>
                     </div>
         
                     <div class=articles-card>
                         <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/doritos.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>2.99$</p>
+                        <p class=prix>1.99€ </p>
                         <h4>Doritos</h4><br>
+                        <h4>paquet chips 400g</h4><br>
                         <button class=add-to-cart>Ajouter au panier</button>
                     </div>
         
                     <div class=articles-card>
                         <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/personal-care/shampoo.jpeg?raw=truealt=article class=img_produit>
-                        <p class=prix>4,50$</p>
-                        <h4>shampoo</h4><br>
+                        <p class=prix>26.10€ </p>
+                        <h4>shampooing</h4><br>
+                        <h4>shampoo anti-pelliculaire</h4><br>
                         <button class=add-to-cart>Ajouter au panier</button>
                     </div>
         
                     <div class=articles-card>
                         <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/fashion/hat.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>12.99$</p>
-                        <h4>hat</h4><br>
+                        <p class=prix>15.99€ </p>
+                        <h4>Wankul</h4><br>
+                        <h4>casquette Wankul laink...</h4><br>
                         <button class=add-to-cart>Ajouter au panier</button>
                     </div>
         
                     <div class=articles-card>
                         <img src=https://github.com/gmathix/site-e-commerce/blob/main/images/products/foods-and-drinks/coca-cola.jpeg?raw=true alt=article class=img_produit>
-                        <p class=prix>3,50$</p>
+                        <p class=prix>3,99€ </p>
                         <h4>coca-cola</h4><br>
+                        <h4>canette 33cl avec sucre</h4><br>
                         <button class=add-to-cart>Ajouter au panier</button>
                     </div>
                 </div>
@@ -239,8 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
     </footer>
 
-
-    <script src="js/main.js"></script>
+ 
 
 
 </body>
