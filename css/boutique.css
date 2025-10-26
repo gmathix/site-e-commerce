@@ -213,28 +213,6 @@ body {
     width: 90%;
 }
 
-/* ---------------------- menu à gauche ---------------------- */
-
-.left_menu {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: absolute;
-    left: 7%;
-    border: solid 1px orangered;
-    padding-right: 30px;
-    border-radius: 30px;
-    width: 15%;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.12);
-
-}
-
-@media(max-width:1180px) {
-    .left_menu {
-        display: none;
-    }
-}
 
 
 /* ---------------------- bandeau promo ---------------------- */
@@ -414,6 +392,40 @@ body {
         width: 100%;
     }
 }
+
+/* ---------------------- menu à gauche ---------------------- */
+
+.left_menu {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    left: 7%;
+    border: solid 1px orangered;
+    padding-right: 30px;
+    border-radius: 30px;
+    width: 15%;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.12);
+    line-height: 1;
+}
+
+.left_menu p {
+    color: orangered;
+}
+
+.produit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media(max-width:1180px) {
+    .left_menu {
+        display: none;
+    }
+}
+
 
 /* ---------------------- zone grille articles ---------------------- */
 
@@ -649,7 +661,7 @@ button:hover {
 }
 
 .pagination .next {
-        backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     background: rgba(0, 0, 0, 0.12);
 }
 
