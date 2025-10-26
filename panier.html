@@ -68,26 +68,26 @@
                             <td><button class=supprimer>supprimer</button></td>
 
                             <div class="total des achats">
-                                <div id="sous-total" class="prix-container">
-                                    <p>sous-total</p>
-                                    <p class="prix">183.98</p>
+                               <div id="sous-total" class="prix-container">
+                                      <p>Sous-total</p>
+                                      <p class="prix">0.00</p>
                                 </div>
-                            <div id="frais-de-livraison" class="prix-container">
-                                <p>Frais de livraison</p>
-                               <p class="prix">4.99</p>
 
-                                </div>
-                                <div id="code promo" class="prix-container">
-                                    <p>code promo</p>
-                                    <p class="montant de promo">-10.99</p>
-                                </div>
-                                 <div class=separateur></div>
-                    <div id=total class=container-prix>
-                        <p>Total</p>
-                        <p class=prix>189.98</p>
+                            <div id="frais-de-livraison" class="prix-container">
+                                      <p>Frais de livraison</p>
+                                      <p class="prix">4.99</p>
+                              </div>
+
+                            <div id="code-promo" class="prix-container">
+                                    <p>Code promo</p>
+                                     <p class="montant-de-promo">-10.99</p>
                     </div>
-                    <div class=separateur></div>
-                    <button id=payer class=valider>Procéder au paiement</button>
+
+                           <div id="total" class="container-prix">
+                                      <p>Total</p>
+                                      <p class="prix">0.00</p>
+                                                   <button id=payer class=valider>Procéder au paiement</button>
+                    </div>
                     </div>
                             </div>
                         </tr>
@@ -95,6 +95,46 @@
                 </table>
             </div>
         </section>
+
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const panierRows = document.querySelectorAll(".Articles-panier");
+    const sousTotalElement = document.querySelector("#sous-total .prix");
+    const fraisLivraisonElement = document.querySelector("#frais-de-livraison .prix");
+    const promoElement = document.querySelector("#code-promo .montant-de-promo");
+    const totalElement = document.querySelector("#total .prix");
+
+    function updateTotal() {
+        let sousTotal = 0;
+
+        panierRows.forEach(row => {
+            const prixUnitaire = parseFloat(row.querySelectorAll(".prix")[0].textContent);
+            const quantitéInput = row.querySelector(".quantité");
+            const quantité = parseInt(quantitéInput.value);
+            const totalCell = row.querySelectorAll(".prix")[1];
+
+            const totalProduit = prixUnitaire * quantité;
+            totalCell.textContent = totalProduit.toFixed(2);
+            sousTotal += totalProduit;
+        });
+
+        sousTotalElement.textContent = sousTotal.toFixed(2);
+
+        const fraisLivraison = parseFloat(fraisLivraisonElement.textContent);
+        const promo = parseFloat(promoElement.textContent.replace("-", ""));
+        const totalFinal = sousTotal + fraisLivraison - promo;
+
+        totalElement.textContent = totalFinal.toFixed(2);
+    }
+
+    document.querySelectorAll(".quantité").forEach(input => {
+        input.addEventListener("change", updateTotal);
+    });
+
+    updateTotal();
+});
+</script>
+
 
          <section id=recommandation>
             <h3>Recommandations</h3>
@@ -143,7 +183,6 @@
             <li class=elem_infos>
                 <b>Roullette russe</b></br>
                 <b>90000 Belfort - France</b></br>
-                <b>Téléphone :</b> 03 84 90 10 10</br>
                 <b>Email :supportroulletterusse@gmail.com</b></br>           
             </li>
         </ul>
@@ -155,6 +194,7 @@
 
 </body>
 </html>
+
 
 
 
