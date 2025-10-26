@@ -10,10 +10,12 @@
   font-family: "Lexend Giga", 
 }
 
-body {
-  background: linear-gradient(to left, #61240d, #050505);
-  color: white;
-  overflow-x: hidden;
+html, body { 
+    height: 100%; 
+    background: linear-gradient(to left, #61240d, #050505);
+    scroll-behavior: smooth;
+    font-family: 'Lexend Giga';
+    color: white;
 }
 .site-header {
     position: fixed;
@@ -255,7 +257,9 @@ button:hover {
   background-color: orangered;
   margin: 1.5rem 0;
 }
-
+.reommandations title {
+   margin-top: 40px;
+}
 #recommandation {
     display: flex;
     flex-direction: column;
