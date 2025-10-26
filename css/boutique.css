@@ -62,7 +62,7 @@ body {
 }
 
 .nav-link:hover {
-    background: var(--hover);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 
@@ -163,11 +163,13 @@ body {
 
 /* ============================================= BODY  =============================================  */
 
+
+
 .invisible {
     border: none;
     height: 70px;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 
@@ -235,6 +237,83 @@ body {
 }
 
 
+/* ---------------------- bandeau promo ---------------------- */
+
+.bandeau_promo {
+    margin-top: 100px;
+}
+
+.bandeau_defilant {
+    width: 100%;
+    background-color: orangered;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-weight: bold;
+    padding: 10px 0;
+    position: relative;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.bandeau_texte {
+    display: inline-block;
+    padding-left: 100%;
+    /* pour commencer hors écran */
+    animation: defile 12s linear infinite;
+}
+
+@keyframes defile {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.article_promo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background: radial-gradient(circle at center, #4a1d0c, #050505);
+
+}
+
+.article_promo img {
+    width: 25%;
+}
+
+.image_promo img {
+    position: relative;
+    right: 0%;
+}
+
+.promo_texte {
+    width: 50%;
+    font-size: clamp(1rem, 1vw, 4rem);
+    text-align: center;
+    color: white;
+}
+
+.promo_texte p {
+    color: orangered;
+
+}
+
+@media (max-width:950px) {
+
+    .article_promo {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .article_promo img {
+        display: none;
+    }
+
+}
 
 /* ---------------------- bandeau filtres ---------------------- */
 
