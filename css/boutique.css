@@ -156,12 +156,37 @@ body {
         padding: 0 12px;
     }
 
-    .nav-links {
-        display: none;
+    .nav-links { 
+        position: fixed;
+        top: 56px;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 56px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 40px 20px;
+        gap: 30px;
+        transition: right 0.4s ease;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 55;
     }
 
-    .burger {
-        display: block;
+    .nav-links.nav-active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 12px 16px;
+        width: 100%;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    .burger { 
+        display:block; 
     }
 
 
