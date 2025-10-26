@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="pagepanier.css">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <ul class="list">
-                <li class="elemen-list"><a href=/index.html class="links">accueil</a></li>
-                <li class="elemen-list"><a href=/pageproduits.html class="links">Boutique</a></li>
-                <li class="elemen-list"><a href=/pagepanier.html class="active-page links">Panier</a></li>
-                <li class="elemen-list"><a href=/pageàpropos.html class="links">à propos</a></li>
-                </li>
+    <header class="site-header" role="banner">
+        <div class="container header-contenu">
+            <a href="index.html" class="logo">RR</a>
+
+            <nav class="nav" role="navigation" aria-label="Main">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="boutique.html" class="nav-link">Boutique</a></li>
+                <li><a href="panier.html" class="nav-link">Panier</a></li>
+                <li><a href="a-propos.html" class="nav-link">À propos</a></li>
             </ul>
-        </nav>
+            </nav>
+
+            <div class="panier">
+            <button class="panier-button" aria-label="Voir le panier">
+                🛒 <span class="panier-count" aria-hidden="true">0</span>
+            </button>
+            <button class="burger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="baniere"></div>
         <section id="panier">
-            <h1>votre panier</h1>
             <div class="panier-container">
                 <table class="vos Produits">
                     <thead>
@@ -35,7 +46,7 @@
                     </thead>
                     <tbody>
                         <tr class=Articles-panier>
-                            <td><img src=article.png alt="image du produit" class=img_produit></td>
+                            <td><img src=c:\Users\Med boubri\Downloads\sneakers.jpeg alt="image du produit" class=img_produit></td>
                             <td><h4>article 1</h4></td>
                             <td class=prix>13.99</td>
                             <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
@@ -69,24 +80,24 @@
 
                             <div class="total des achats">
                                <div id="sous-total" class="prix-container">
-                                    <p>Sous-total</p>
-                                     <p class="prix">0.00</p>
+                                      <p>Sous-total</p>
+                                      <p class="prix">0.00</p>
                                 </div>
 
                             <div id="frais-de-livraison" class="prix-container">
-                                     <p>Frais de livraison</p>
-                                     <p class="prix">4.99</p>
+                                      <p>Frais de livraison</p>
+                                      <p class="prix">4.99</p>
                               </div>
 
                             <div id="code-promo" class="prix-container">
-                                 <p>Code promo</p>
-                                 <p class="montant-de-promo">-10.99</p>
+                                    <p>Code promo</p>
+                                     <p class="montant-de-promo">-10.99</p>
                     </div>
 
                            <div id="total" class="container-prix">
-                              <p>Total</p>
-                              <p class="prix">0.00</p>
-                       <button id=payer class=valider>Procéder au paiement</button>
+                                      <p>Total</p>
+                                      <p class="prix">0.00</p>
+                                                   <button id=payer class=valider>Procéder au paiement</button>
                     </div>
                     </div>
                             </div>
@@ -178,15 +189,51 @@ document.addEventListener("DOMContentLoaded", function () {
      
     </main>
     
-    <footer>
-        <ul class=infos>
-            <li class=elem_infos>
-                <b>Roullette russe</b></br>
-                <b>90000 Belfort - France</b></br>
-                <b>Email :supportroulletterusse@gmail.com</b></br>           
-            </li>
-        </ul>
-        <div class=creation_page>Page crée par Mohamed BOUOIARARNE</div>
+<footer >
+        <div class="footer__container">
+            <div class="footer__item">
+                <h2>Nos plateformes</h2>
+                <hr class="footer-hr">
+                <div class="footer__social-links">
+                    <a href="#"><img src="images/instagram.png"></a>
+                    <a href="#"><img src="images/tik-tok.png"></a>              </a>
+                    <a href="#"><img src="images/twitter.png"></a>
+                </div>
+            </div>
+
+            <div class="footer__item">
+                <h2>Nos Catégories</h2>
+                <hr class="footer-hr">
+                <div class="footer__categories">
+                    <a href="#">Nourriture</a>
+                    <a href="#">Hygiene</a>
+                    <a href="#">Tech & Accessoires</a>
+                    <a href="#">Mode</a>
+                    <a href="#">Fournitures Scolaires</a>
+                    <a href="#">Maison & Cuisine</a>
+                    <a href="#">Jeux & Jouets</a>
+                    <a href="#"><strong>Ultimate Gamble Box</strong></a>
+                </div>
+            </div>  
+
+            <div class="footer__item">
+                <h2>Modes de Paiement</h2>
+                <hr class="footer-hr">
+                <div class="footer__categories">
+                    <img src="images/american-express.png">
+                    <img src="images/apple-pay.png">
+                    <img src="images/bitcoin.png">
+                    <img src="images/card.png">
+                    <img src="images/google-pay.png">
+                    <img src="images/paypal.png">
+                    <img src="images/visa.png">
+                </div>
+
+            </div>
+        </div>
+        <p class="footer__text"><strong>© 2024 Russian Roulette. Tous droits réservés.</strong></p>
+        <p class="footer__text">© Mathis GUIHOT</p>
+        
     </footer>
 
  
