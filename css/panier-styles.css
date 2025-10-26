@@ -100,22 +100,39 @@ body {
   font-size: 12px;
 }
 
+
 /* burger pour mobiles */
-.burger {
-  display: none;
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 34px;
-  cursor: pointer;
+.burger { 
+    display: none; 
+    background: transparent; 
+    border: none; 
+    width: 40px; 
+    height: 34px;
+    cursor: pointer;
+    position: relative;
+    z-index: 60;
 }
 
-.burger span {
-  display: block;
-  height: 3px;
-  background: white;
-  margin: 6px 0;
-  border-radius: 2px;
+.burger span{ 
+    display: block; 
+    height: 3px; 
+    background: white;
+    margin: 6px 0; 
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation du burger en X */
+.burger-active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.burger-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /*  HERO (titre, intro, barrel)  */
