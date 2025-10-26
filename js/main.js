@@ -26,3 +26,31 @@
     });
   });
 });
+
+(function(){
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const header = document.querySelector('.site-header');
+    
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        burger.classList.toggle('burger-active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('burger-active');
+        });
+    });
+
+    // Fermer le menu si on clique en dehors
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('burger-active');
+        }
+    });
+})();
