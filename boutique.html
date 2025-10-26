@@ -14,12 +14,27 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">ACCUEIL</a>
-        <a href="index.html">BOUTIQUE</a>
-        <div class="icon">
-            <a href="index.html">A propos</a>
-            <a href="index.html">Panier</a>
+    <header class="site-header" role="banner">
+        <div class="container header-contenu">
+            <a href="index.html" class="logo">RR</a>
+
+            <nav class="nav" role="navigation" aria-label="Main">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="boutique.html" class="nav-link">Boutique</a></li>
+                    <li><a href="panier.html" class="nav-link">Panier</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                </ul>
+            </nav>
+
+            <div class="panier">
+                <button class="panier-button" aria-label="Voir le panier">
+                    🛒 <span class="panier-count" aria-hidden="true">0</span>
+                </button>
+                <button class="burger" aria-label="Ouvrir le menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -73,9 +88,81 @@
         </div>
     </section>
 
-
     <h2 class="sous-titre">NOUVEAUTÉS</h2>
     <br>
+
+    <div class="left_menu">
+        <ul>
+            <li class="categorie">CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>CATEGORIE
+                <ul>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                    <li>produit 1</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
     <div class="grille_articles">
 
@@ -190,6 +277,9 @@
             </div>
         </div>
     </div>
+
+    <h2 class="sous-titre">NOTRE SELECTION POUR VOUS </h2>
+    <br>
     <div class="grille_articles">
 
         <div class="article">
@@ -259,6 +349,53 @@
             <button>Ajouter au panier</button>
         </div>
     </div>
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__item">
+                <h2>Nos plateformes</h2>
+                <hr class="footer-hr">
+                <div class="footer__social-links">
+                    <a href="#"><img src="images/instagram.png"></a>
+                    <a href="#"><img src="images/tik-tok.png"></a> </a>
+                    <a href="#"><img src="images/twitter.png"></a>
+                </div>
+            </div>
+
+            <div class="footer__item">
+                <h2>Nos Catégories</h2>
+                <hr class="footer-hr">
+                <div class="footer__categories">
+                    <a href="#">Nourriture</a>
+                    <a href="#">Hygiene</a>
+                    <a href="#">Tech & Accessoires</a>
+                    <a href="#">Mode</a>
+                    <a href="#">Fournitures Scolaires</a>
+                    <a href="#">Maison & Cuisine</a>
+                    <a href="#">Jeux & Jouets</a>
+                    <a href="#"><strong>Ultimate Gamble Box</strong></a>
+                </div>
+            </div>
+
+            <div class="footer__item">
+                <h2>Modes de Paiement</h2>
+                <hr class="footer-hr">
+                <div class="footer__categories">
+                    <img src="images/american-express.png">
+                    <img src="images/apple-pay.png">
+                    <img src="images/bitcoin.png">
+                    <img src="images/card.png">
+                    <img src="images/google-pay.png">
+                    <img src="images/paypal.png">
+                    <img src="images/visa.png">
+                </div>
+
+            </div>
+        </div>
+        <p class="footer__text"><strong>© 2024 Russian Roulette. Tous droits réservés.</strong></p>
+        <p class="footer__text">© Lino DUBOIS</p>
+
+    </footer>
 </body>
 
 <script>
