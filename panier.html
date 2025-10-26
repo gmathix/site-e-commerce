@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier</title>
-    <link rel="stylesheet href="css/panier-styles.css">
+    <link rel="stylesheet" href="pagepanier.css">
 </head>
 <body>
     <header>
@@ -39,12 +39,133 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=""
+                        <tr class=Articles-panier>
+                            <td><img src=article.png alt="image du produit" class=img_produit></td>
+                            <td><h4>article 1</h4></td>
+                            <td class=prix>13.99</td>
+                            <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
+                            <td class=prix>13.99</td>
+                            <td><button class=supprimer></button></td>
+                        </tr>
+
+                        <tr class=Articles-panier>
+                            <td><img src=article.Png alt="image du produit" class=img_produit></td>
+                            <td><h4>article 2</h4></td>
+                            <td class=prix>140</td>
+                            <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
+                            <td class=prix>140</td>
+                            <td><button class=supprimer></button></td>
+
+                            <tr class=Articles-panier>
+                            <td><img src=article.Png alt="image du produit" class=img_produit></td>
+                            <td><h4>article 3</h4></td>
+                            <td class=prix>19</td>
+                            <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
+                            <td class=prix>19</td>
+                            <td><button class=supprimer></button></td>
+
+                            <tr class=Articles-panier>
+                            <td><img src=article.Png alt="image du produit" class=img_produit></td>
+                            <td><h4>article 4</h4></td>
+                            <td class=prix>10.99</td>
+                            <td> <input type=number min=1 max=10 value=1 step=1 class=quantité name=quantité> </td>
+                            <td class=prix>10.99</td>
+                            <td><button class=supprimer></button></td>
+
+                            <div class="total des achats">
+                                <div id="sous-total" class="prix-container">
+                                    <p>sous-total</p>
+                                    <p class="prix">183.98</p>
+                                </div>
+                                <div id="frais de laivraisons" class="prix container">
+                                    <p>frais de laivraisons</p>
+                                    <p class="prix">4.99</p>
+                                </div>
+                                <div id="code promo" class="prix-container">
+                                    <p>code promo</p>
+                                    <p class="montant de promo">-10.99</p>
+                                </div>
+                                 <div class=separateur></div>
+                    <div id=total class=container-prix>
+                        <p>Total</p>
+                        <p class=prix>189.98</p>
+                    </div>
+                    <div class=separateur></div>
+                    <button id=payer class=valider>Procéder au paiement</button>
+                    </div>
+                            </div>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+
+         <section id=recommandation>
+            <h3>Recommandations</h3>
+            <div class=recommandations>
+                <button class="scroll-button scroll-left" id=scrollLeft>&lt;</button>
+                <button class="scroll-button scroll-right" id=scrollRight>&gt;</button>
+                <div class=recommandation-container>
+                    <div class=articles-card id=img-produit>
+                        <img src=article.png alt=article.png class=img_produit>
+                        <p class=prix>5</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
         
+                    <div class=articles-card>
+                        <img src=article.png alt=mochis class=img_produit>
+                        <p class=prix>35</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
+        
+                    <div class=food-card>
+                        <img src=/nouilles.c9ef9a3b.jpg alt=article class=img_produit>
+                        <p class=prix>3,50</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
+        
+                    <div class=articles-card>
+                        <img src=article.png alt=article class=img_produit>
+                        <p class=prix>4,50</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
+        
+                    <div class=articles-card>
+                        <img src=article.png alt=article class=img_produit>
+                        <p class=prix>40</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
+        
+                    <div class=articles-card>
+                        <img src=article.png alt=article class=img_produit>
+                        <p class=prix>7,50</p>
+                        <h4>article</h4><br>
+                        <button class=add-to-cart>Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>        
     </main>
+    
+    <footer>
+        <ul class=infos>
+            <li class=elem_infos>
+                <b>Roullette russe</b></br>
+                <b>90000 Belfort - France</b></br>
+                <b>Téléphone :</b> 03 84 90 10 10</br>
+                <b>Email :supportroulletterusse@gmail.com</b></br>           
+            </li>
+        </ul>
+        <div class=creation_page>Page crée par Mohamed BOUOIARARNE</div>
+    </footer>
+
+ 
+
+<script src="pagepanier.js"></script>
 </body>
 </html>
+
