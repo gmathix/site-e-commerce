@@ -1,4 +1,9 @@
 * {
+
+    font-family: "Lexend Giga";
+
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +25,7 @@ body {
     align-items: center;
     z-index: 50;
     backdrop-filter: blur(12px);
-    background: rgba(0,0,0,0.12);
+    background: rgba(0, 0, 0, 0.12);
 }
 
 .header-contenu {
@@ -32,26 +37,27 @@ body {
     width: 100%;
     gap: 16px;
     padding: 0 20px;
+
 }
 
-.logo { 
-    font-weight: 700; 
+.logo {
+    font-weight: 700;
     letter-spacing: 2px;
     color: white;
-    text-decoration: none; 
-    font-size: 1.05rem; 
+    text-decoration: none;
+    font-size: 1.05rem;
 }
 
 
-.nav-links { 
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 18px; 
-    align-items: center; 
+    gap: 18px;
+    align-items: center;
 }
 
 .nav-link {
-    color: rgba(255,255,255,0.88);
+    color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 8px;
@@ -60,51 +66,51 @@ body {
 }
 
 .nav-link:hover {
-    background: var(--hover); 
+    background: var(--hover);
 }
 
 
-.panier { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
+.panier {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .panier-button {
     background: var(--glass);
-    border: none; 
-    color: white; 
-    padding: 8px 12px; 
-    border-radius: 10px; 
-    cursor: pointer; 
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
     font-weight: 700;
 }
 
-.panier-count { 
+.panier-count {
     background: rgb(207, 67, 67);
-    padding: 2px 6px; 
-    border-radius: 20px; 
-    margin-left: 8px; 
-    color: white; 
-    font-size: 12px; 
+    padding: 2px 6px;
+    border-radius: 20px;
+    margin-left: 8px;
+    color: white;
+    font-size: 12px;
 }
 
 /* burger pour mobiles */
-.burger { 
-    display: none; 
-    background: transparent; 
-    border: none; 
-    width: 40px; 
+.burger {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 40px;
     height: 34px;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
-.burger span{ 
-    display: block; 
-    height: 3px; 
+.burger span {
+    display: block;
+    height: 3px;
     background: white;
-    margin: 6px 0; 
-    border-radius: 2px; 
+    margin: 6px 0;
+    border-radius: 2px;
 }
 
 /*  HERO (titre, intro, barrel)  */
@@ -119,7 +125,7 @@ body {
 }
 
 
-.hero-title{
+.hero-title {
     font-size: clamp(20px, 4vw, 6vw);
     letter-spacing: 8px;
     font-weight: 800;
@@ -131,33 +137,33 @@ body {
 }
 
 @media (max-width: 650px) {
-    .site-header { 
-        height:56px; 
+    .site-header {
+        height: 56px;
     }
 
-    .header-contenu { 
-        padding:0 12px; 
+    .header-contenu {
+        padding: 0 12px;
     }
 
-    .nav-links { 
-        display: none; 
+    .nav-links {
+        display: none;
     }
 
-    .burger { 
-        display:block; 
+    .burger {
+        display: block;
     }
 
 
-    .hero { 
-        padding-top: 78px; 
-        gap:10px; 
+    .hero {
+        padding-top: 78px;
+        gap: 10px;
     }
 
     .carousel .product-container {
-        flex: 0 0 100%; /* un seul produit */
+        flex: 0 0 100%;
+        /* un seul produit */
     }
 }
-
 /* ============================================= PANIER  ============================================= */
 
 
