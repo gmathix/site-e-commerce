@@ -511,6 +511,7 @@ button:hover {
 
 .article:hover {
     transform: scale(1.10);
+    box-shadow: 0 20px 60px rgba(230, 63, 44, 0.3), 0 0 40px rgba(224, 61, 43, 0.2);
 }
 
 @media (max-width:650px) {
@@ -569,6 +570,7 @@ button:hover {
 
 .articlev2:hover {
     transform: scale(1.08);
+    box-shadow: 0 20px 60px rgba(232, 75, 58, 0.3), 0 0 40px rgba(232, 75, 58, 0.2);
 }
 
 .decouvrir {
